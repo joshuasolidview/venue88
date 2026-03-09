@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Venue 88 Guest WiFi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f7f9f5;
+  color:#222;
+  overflow-x:hidden;
+}
+
+/* WIFI BANNER */
+
+.wifi-banner{
+  background: linear-gradient(90deg,#8db73e,#a8d24f);
+  color:white;
+  padding:18px 20px;
+  text-align:center;
+  font-weight:600;
+  font-size:16px;
+  letter-spacing:.5px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  animation:fadeUp 1s ease;
+}
+
+.wifi-banner span{
+  font-weight:700;
+}
+
+/* HERO */
+
+.hero{
+  height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.35)),
+  url('https://pix8.agoda.net/hotelImages/931234/-1/846e3352465f0a3a1d2ede631828d4a6.jpg')
+  center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  padding:20px;
+}
+
+/* GLASS CARD */
+
+.hero-card{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  padding:50px 60px;
+  border-radius:20px;
+  max-width:750px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.3);
+  animation:fadeUp 1.3s ease;
+}
+
+.logo{
+  width:160px;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:3.6rem;
+  margin-bottom:10px;
+  font-weight:700;
+  white-space: nowrap;
+}
+
+.hero p{
+  font-size:1.3rem;
+  opacity:0.9;
+}
+
+/* SCROLL TEXT */
+
+/* .scroll{
+  margin-top:40px;
+  font-size:14px;
+  opacity:0.8;
+} */
+
+/* SECTION */
+
+section{
+  padding:90px 20px;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+}
+
+/* SECTION TITLES */
+
+.section-title{
+  font-size:2.6rem;
+  text-align:center;
+  margin-bottom:60px;
+  color:#8db73e;
+  position:relative;
+}
+
+.section-title:after{
+  content:'';
+  width:70px;
+  height:4px;
+  background:#8db73e;
+  display:block;
+  margin:14px auto 0;
+  border-radius:5px;
+}
+
+/* FEATURES */
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:35px;
+}
+
+.feature-card{
+  background:white;
+  padding:35px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  transition:0.35s;
+}
+
+.feature-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.feature-card img{
+  width:55px;
+  margin-bottom:15px;
+}
+
+.feature-card h3{
+  color:#8db73e;
+  margin-bottom:10px;
+}
+
+/* OFFERS */
+
+.offers{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+}
+
+.offer-card{
+  border-radius:18px;
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 15px 40px rgba(0,0,0,0.12);
+}
+
+.offer-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.offer-info{
+  padding:25px;
+  background:white;
+}
+
+.offer-info h3{
+  color:#8db73e;
+  margin-bottom:10px;
+}
+
+/* PARALLAX */
+
+.parallax{
+  background:
+  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+  url('https://pix8.agoda.net/hotelImages/931234/-1/846e3352465f0a3a1d2ede631828d4a6.jpg')
+  center/cover fixed;
+  padding:120px 20px;
+  text-align:center;
+  color:white;
+  font-size:2rem;
+  font-weight:600;
+}
+
+/* GALLERY */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:18px;
+}
+
+.gallery img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:12px;
+  transition:0.35s;
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+}
+
+/* SOCIAL */
+
+.social{
+  text-align:center;
+}
+
+.social-links{
+  display:flex;
+  justify-content:center;
+  gap:60px;
+  margin-top:35px;
+  flex-wrap:wrap;
+}
+
+.social-links a{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:600;
+  text-decoration:none;
+  color:#333;
+  font-size:18px;
+}
+
+.social-links img{
+  width:38px;
+}
+
+/* FOOTER */
+
+footer{
+  background:#8db73e;
+  color:white;
+  text-align:center;
+  padding:45px 20px;
+  margin-top:70px;
+}
+
+footer p{
+  margin:6px 0;
+}
+
+.wifi-icon {
+  width: 24px;  
+  height: 24px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+  font-size:2.5rem;
+}
+
+.hero-card{
+  padding:40px 25px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-card">
+
+    <img class="logo" src="https://raw.githubusercontent.com/joshuasolidview/venue88-landing/main/vhep%20logo.png">
+
+    <h1>Welcome to Venue 88</h1>
+
+    <p>Your Dream Stay, Celebration & Experience Starts Here</p>
+
+    <div>
+      Enjoy free high-speed guest WiFi while exploring our venue
+    </div>
+
+  </div>
+
+</section>
+
+<!-- WIFI STATUS BANNER -->
+
+<div class="wifi-banner">
+  <img src="https://img.icons8.com/ios-filled/50/wifi.png" alt="WiFi Icon" class="wifi-icon" />
+  You are now <span>Connected to Venue 88 Guest WiFi</span> — Enjoy fast and secure internet access during your stay.
+</div>
+
+<!-- FEATURES -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">Why Choose Venue 88?</h2>
+
+<div class="features">
+
+<div class="feature-card">
+<img src="https://img.icons8.com/ios-filled/100/swimming-pool.png">
+<h3>Pool Garden</h3>
+<p>Relax and enjoy our refreshing resort style pool.</p>
+</div>
+
+<div class="feature-card">
+<img src="https://img.icons8.com/ios-filled/100/restaurant.png">
+<h3>Dining</h3>
+<p>Experience delicious cuisine and relaxing meals.</p>
+</div>
+
+<div class="feature-card">
+<img src="https://img.icons8.com/ios-filled/100/conference.png">
+<h3>Events</h3>
+<p>Elegant halls perfect for weddings and conferences.</p>
+</div>
+
+<div class="feature-card">
+<img src="https://img.icons8.com/ios-filled/100/bed.png">
+<h3>Luxury Rooms</h3>
+<p>Comfortable modern rooms for a perfect stay.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- OFFERS -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">Hot Offers</h2>
+
+<div class="offers">
+
+<div class="offer-card">
+<img src="https://pix8.agoda.net/hotelImages/931234/-1/846e3352465f0a3a1d2ede631828d4a6.jpg">
+<div class="offer-info">
+<h3>Stay & Save</h3>
+<p>Book now and get up to 20% OFF with free breakfast.</p>
+</div>
+</div>
+
+<div class="offer-card">
+<img src="https://pix8.agoda.net/hotelImages/931234/-1/846e3352465f0a3a1d2ede631828d4a6.jpg">
+<div class="offer-info">
+<h3>Dream Weddings</h3>
+<p>Celebrate your unforgettable wedding at Venue 88.</p>
+</div>
+</div>
+
+<div class="offer-card">
+<img src="https://pix8.agoda.net/hotelImages/931234/-1/846e3352465f0a3a1d2ede631828d4a6.jpg">
+<div class="offer-info">
+<h3>Corporate Events</h3>
+<p>Perfect venue for seminars, meetings and conferences.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PARALLAX -->
+
+<div class="parallax">
+Celebrate • Relax • Experience Venue 88
+</div>
+
+<!-- GALLERY -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">Our Spaces</h2>
+
+<div class="gallery">
+
+<img src="https://pix8.agoda.net/hotelImages/931234/-1/846e3352465f0a3a1d2ede631828d4a6.jpg">
+<img src="https://pix8.agoda.net/hotelImages/931234/-1/846e3352465f0a3a1d2ede631828d4a6.jpg">
+<img src="https://pix8.agoda.net/hotelImages/931234/-1/846e3352465f0a3a1d2ede631828d4a6.jpg">
+<img src="https://pix8.agoda.net/hotelImages/931234/-1/846e3352465f0a3a1d2ede631828d4a6.jpg">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SOCIAL -->
+
+<section class="social">
+
+<div class="container">
+
+<h2 class="section-title">Follow Us</h2>
+
+<div class="social-links">
+
+<a href="https://www.facebook.com/venue88gensan/">
+<img src="https://img.icons8.com/ios-filled/50/facebook-new.png">
+Venue88Gensan
+</a>
+
+<a href="https://www.instagram.com/venue88gensan/">
+<img src="https://img.icons8.com/ios-filled/50/instagram-new.png">
+@venue88gensan
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>Yumang Street, Brgy. San Isidro, General Santos City</p>
+<p>(083) 553 9988 | events@venue88gensan.com</p>
+<p>© 2026 Venue 88 Hotel & Events Place</p>
+
+</footer>
+
+</body>
+</html>
